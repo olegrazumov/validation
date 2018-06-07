@@ -1,0 +1,31 @@
+{
+    "name": "olegrazumov/validation",
+    "authors": [
+        {
+            "name": "Oleg Razumov",
+            "email": "ol.razumov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Testing\\": "test/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "upload-coverage": "php-coveralls -v"
+    },
+    "minimum-stability": "dev"
+}
